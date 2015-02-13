@@ -1,0 +1,8 @@
+name = hookRefresh
+description = Hook js is able to refresh the page quickly by scrolling up on the page.
+core = 7.x
+php = 5
+
+version = "7.x-2.0-alpha2"
+core = "7.x"
+project = "hookRefresh"

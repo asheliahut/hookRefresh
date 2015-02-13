@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Drupal integration with the Hookjs Plugin.
+ */
+/**
+ * Implements hook_init().
+ */
+function hookRefresh_init() {
+    // Add it all to the page.
+	$path = drupal_get_path('module', 'hookRefresh');
+	drupal_add_css($path .'/hook.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+	drupal_add_js($path .'/mousewheel.js');
+     drupal_add_js($path .'/hook.js');
+	 drupal_add_js('jQuery(\'body\').prepend(\'<div class="hook" id="hook"><div class="hook-loader"><div class="hook-spinner"></div></div></div>\').find(\'#hook\').hook();', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+  }
+  
+  
+
+  
+
